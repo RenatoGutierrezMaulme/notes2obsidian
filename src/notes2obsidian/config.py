@@ -20,4 +20,4 @@ class Settings(BaseSettings):
     def telegram_bot_username(self):
         return self.telegram_bot_username
 
-print(__name__)
+

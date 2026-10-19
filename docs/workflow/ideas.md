@@ -51,7 +51,7 @@ s libres, recortar y embeber la imagen).
 
 ---
 
-## 3. Organización tentativa
+## 3. Organization and contracts
 
 notes2obsidian/
 ├── pyproject.toml
