@@ -1,7 +1,7 @@
 [project]
 name = "notes2obsidian"
 version = "0.1.0"
-description = "Add your description here"
+description = "App to transform files (images/pdf) in structured data format in order to be read from Obsidian"
 readme = "README.md"
 authors = [
     { name = "Renato", email = "renato.gutierrez.maulme@gmail.com" }
@@ -9,6 +9,8 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "logger>=1.4",
+    "pathlib>=1.0.1",
+    "pydantic>=2.14.1",
     "pydantic-settings>=2.16.0",
     "python-telegram-bot>=22.8",
 ]
@@ -19,3 +21,5 @@ notes2obsidian = "notes2obsidian:main"
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
 build-backend = "uv_build"
+
+

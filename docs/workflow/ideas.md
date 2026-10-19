@@ -73,3 +73,8 @@ notes2obsidian/
 └── tests/
     ├── test_render.py
     └── test_preprocess.py
+
+**models.py** : contract, how the data flows in the app \
+**pipeline.py** : how the different scripts are communicated
+**bot.py** : Telegram API configuration
+**render.py** : from files (PDFs, PNGs, etc) to markdown
