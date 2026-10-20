@@ -9,7 +9,7 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "logger>=1.4",
-    "markitdown[all]>=0.1.8",
+    "marker-pdf[full]>=2.0.0",
     "pathlib>=1.0.1",
     "pydantic>=2.14.1",
     "pydantic-settings>=2.16.0",

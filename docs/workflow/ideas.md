@@ -55,24 +55,24 @@ s libres, recortar y embeber la imagen).
 
 notes2obsidian/
 ├── pyproject.toml
-├── uv.lock
+├── .env                  # tokens (no va a git)
+├── .env.example
+├── .gitignore
 ├── README.md
-├── main.py                      # punto de entrada, muy corto
-├── src/
-│   └── notes2obsidian/
-│       ├── __init__.py          # marca la carpeta como paquete
-│       ├── config.py            # lee .env y ajustes
-│       ├── models.py            # modelos Pydantic (Nota, ResultadoOCR)
-│       ├── preprocess.py        # PDF → imágenes, resize
-│       ├── extractor.py         # llamada al LLM de visión
-│       ├── validate.py          # chequeo de LaTeX y esquema
-│       ├── render.py            # JSON → Markdown
-│       ├── storage.py           # SQLite, hashes, escritura al vault
-│       ├── pipeline.py          # une los pasos anteriores
-│       └── bot.py               # handlers de Telegram
+├── src/notes2obsidian/
+│   ├── __init__.py
+│   ├── main.py           # punto de entrada: arranca el bot
+│   ├── config.py         # settings: token, rutas, modo de Marker
+│   ├── models.py         # contratos: Job, Result, Metadata
+│   ├── bot.py            # handlers de Telegram (solo recibir/responder)
+│   ├── pipeline.py       # orquesta: ingest → convert → classify → save
+│   ├── converters/
+│   │   ├── base.py       # interfaz común: convert(path) -> ConversionResult
+│   │   ├── marker_pdf.py # tu código de Marker
+│   │   └── audio.py      # futuro
+│   ├── classify.py       # título / carpeta / tags
+│   └── obsidian.py       # escribir la nota en el vault
 └── tests/
-    ├── test_render.py
-    └── test_preprocess.py
 
 **models.py** : contract, how the data flows in the app \
 **pipeline.py** : how the different scripts are communicated

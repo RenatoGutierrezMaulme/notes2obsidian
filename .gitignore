@@ -1,4 +1,4 @@
-# Default ignored files
+# Default ignored temp
 /shelf/
 /workspace.xml
 
@@ -11,3 +11,7 @@
 
 # Pycharm slop
 .idea
+
+# Test temp
+
+*.pdf

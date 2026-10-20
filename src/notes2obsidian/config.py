@@ -1,5 +1,5 @@
 from pathlib import Path
-
+from enum import Enum
 from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -19,5 +19,13 @@ class Settings(BaseSettings):
         return self.telegram_bot_token
     def telegram_bot_username(self):
         return self.telegram_bot_username
+
+# str -> create a "str" object
+class OutputFormat(str, Enum):
+    CSV = "csv"
+    JSON = "json"
+    MARKDOWN = "markdown"
+
+
 
 
