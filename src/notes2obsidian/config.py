@@ -36,7 +36,7 @@ class Settings(BaseSettings):
     output_path: Path = ROOT / "output"
 
 
-
+#print(Settings().telegram_bot_token)
 
 
 

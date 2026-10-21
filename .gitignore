@@ -13,5 +13,5 @@
 .idea
 
 # Test temp
-
 *.pdf
+/scripts/IO_test.py
