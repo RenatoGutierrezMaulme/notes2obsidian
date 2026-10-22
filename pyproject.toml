@@ -8,19 +8,14 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "logger>=1.4",
     "marker-pdf[full]>=2.0.0",
-    "pathlib>=1.0.1",
     "pydantic>=2.14.1",
     "pydantic-settings>=2.16.0",
     "python-telegram-bot>=22.8",
 ]
 
 [project.scripts]
-notes2obsidian = "notes2obsidian:main"
-
-[tool.setuptools.packages.find]
-where = ["src"]
+notes2obsidian = "notes2obsidian.bot:main"
 
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]

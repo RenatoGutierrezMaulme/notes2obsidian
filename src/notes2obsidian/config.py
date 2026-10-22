@@ -24,11 +24,6 @@ class Settings(BaseSettings):
     telegram_bot_token    : SecretStr
     telegram_bot_username : SecretStr
 
-    def telegram_bot_token(self):
-        return self.telegram_bot_token
-    def telegram_bot_username(self):
-        return self.telegram_bot_username
-
     use_llm : bool = False
 
     # ----------- Output ----------------------
